@@ -46,32 +46,114 @@ export default function Home() {
       <section
         id="home"
         ref={setSectionRef('home')}
-        className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16"
+        className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16 overflow-hidden"
       >
-        <div className="max-w-4xl mx-auto text-center opacity-0 transition-opacity duration-1000">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in-up">
-            Hi, I'm{' '}
-            <span className="text-blue-600 dark:text-blue-400">Your Name</span>
+        {/* Enhanced Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl animate-pulse animation-delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-400/20 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+          <div className="absolute top-40 right-1/4 w-64 h-64 bg-indigo-400/20 rounded-full blur-3xl animate-pulse animation-delay-300"></div>
+          <div className="absolute bottom-40 left-1/4 w-56 h-56 bg-cyan-400/20 rounded-full blur-3xl animate-pulse animation-delay-1500"></div>
+        </div>
+
+        {/* Grid Pattern Overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-40"></div>
+
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-50/50 dark:to-gray-900/50"></div>
+
+        <div className="relative max-w-6xl mx-auto text-center z-10">
+          {/* Greeting Badge */}
+          <div className="inline-block mb-8 animate-fade-in-up">
+            <span className="px-5 py-2.5 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-800 shadow-lg backdrop-blur-sm">
+              👋 Welcome to my portfolio
+            </span>
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-8 animate-fade-in-up">
+            <span className="block text-gray-900 dark:text-white mb-3 tracking-tight">
+              Hi, I'm
+            </span>
+            <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient drop-shadow-lg">
+              Minal
+            </span>
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up animation-delay-200">
-            Full Stack Developer & Creative Problem Solver
+
+          {/* Student Info Card */}
+          <div className="inline-flex items-center gap-3 px-6 py-3 mb-6 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-full border border-gray-200 dark:border-gray-700 shadow-xl animate-fade-in-up animation-delay-200">
+            <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full">
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <div className="text-left">
+              <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">Currently Studying</p>
+              <p className="text-base font-bold text-gray-900 dark:text-white">
+                Y1 Fintech Student at <span className="text-blue-600 dark:text-blue-400">SIT</span>
+              </p>
+            </div>
+          </div>
+
+          {/* Subtitle */}
+          <p className="text-2xl sm:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6 animate-fade-in-up animation-delay-300">
+            Creative Problem Solver
           </p>
-          <p className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in-up animation-delay-400">
-            I build beautiful, functional, and user-friendly web applications
-            that make a difference.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
+
+          {/* Description with Icons */}
+          <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-400">
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+              I build beautiful, functional, and user-friendly web applications
+              that make a difference. Turning ideas into reality, one line of code at a time.
+            </p>
+            
+            {/* Quick Stats */}
+            <div className="flex flex-wrap justify-center gap-6 mt-8">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700">
+                <span className="text-2xl">💻</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Web Development</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700">
+                <span className="text-2xl">🎨</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">UI/UX Design</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700">
+                <span className="text-2xl">🚀</span>
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Innovation</span>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animation-delay-600">
             <a
               href="#projects"
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 overflow-hidden"
             >
-              View My Work
+              <span className="relative z-10 flex items-center gap-2">
+                View My Work
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a
               href="#contact"
-              className="px-8 py-3 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg font-semibold border-2 border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 transition-colors duration-200"
+              className="px-8 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-900 dark:text-white rounded-xl font-semibold border-2 border-gray-300 dark:border-gray-600 hover:border-blue-600 dark:hover:border-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Get In Touch
+            </a>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="mt-20 animate-bounce">
+            <a href="#about" className="flex flex-col items-center gap-2 text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <span className="text-sm font-medium">Scroll to explore</span>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
             </a>
           </div>
         </div>
@@ -253,7 +335,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 dark:bg-black text-white py-8 text-center">
         <p className="text-gray-400">
-          © {new Date().getFullYear()} Your Name. All rights reserved.
+          © {new Date().getFullYear()} Minal. All rights reserved.
         </p>
       </footer>
     </div>
