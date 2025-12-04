@@ -104,8 +104,8 @@ export default function Home() {
           {/* Description with Icons */}
           <div className="max-w-3xl mx-auto mb-12 animate-fade-in-up animation-delay-400">
             <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              I build beautiful, functional, and user-friendly web applications
-              that make a difference. Turning ideas into reality, one line of code at a time.
+              I'm just getting started on my learning journey, but I'm incredibly passionate 
+              about exploring new technologies and bringing creative ideas to life.
             </p>
             
             {/* Quick Stats */}
